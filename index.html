@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Web Apps (PWA) - Guide Complet</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            color: #3498db;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">PWA Guide</div>
+            <div class="space-x-6">
+                <a href="#definition" class="nav-link">Définition</a>
+                <a href="#caracteristiques" class="nav-link">Caractéristiques</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#ressources" class="nav-link">Ressources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Progressive Web Apps (PWA)</h1>
+            <p class="text-xl max-w-2xl mx-auto">Découvrez une nouvelle génération d'applications web qui combinent le meilleur du web et des applications mobiles</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- Définition -->
+        <section id="definition" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10">Qu'est-ce qu'une PWA ?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">🌐 Définition</h3>
+                    <p>Une Progressive Web App (PWA) est une application web qui utilise les technologies modernes du web pour offrir une expérience utilisateur similaire à une application mobile native.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">🚀 Avantages Clés</h3>
+                    <ul class="list-disc pl-5">
+                        <li>Fonctionnent sur tous les appareils</li>
+                        <li>Installation directe sans store</li>
+                        <li>Fonctionnement hors ligne</li>
+                        <li>Performances optimisées</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Caractéristiques -->
+        <section id="caracteristiques" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10">Caractéristiques Techniques</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="feature-icon">🖥️</div>
+                    <h3 class="text-xl font-semibold mb-4">Interface Responsive</h3>
+                    <p>S'adapte parfaitement à tous les types d'écrans et de dispositifs</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="feature-icon">📡</div>
+                    <h3 class="text-xl font-semibold mb-4">Service Worker</h3>
+                    <p>Gestion du cache et du fonctionnement hors ligne</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="text-xl font-semibold mb-4">Manifeste Web</h3>
+                    <p>Permet l'installation et la configuration de l'application</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparaison -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10">Comparaison des Applications</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white shadow-md rounded-lg">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="p-4">Critères</th>
+                            <th class="p-4">Web App</th>
+                            <th class="p-4">PWA</th>
+                            <th class="p-4">App Native</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Fonctionne hors ligne</td>
+                            <td class="p-4 text-center">❌</td>
+                            <td class="p-4 text-center">✅</td>
+                            <td class="p-4 text-center">✅</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Installation sur appareil</td>
+                            <td class="p-4 text-center">❌</td>
+                            <td class="p-4 text-center">✅</td>
+                            <td class="p-4 text-center">✅</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold">Notifications push</td>
+                            <td class="p-4 text-center">❌</td>
+                            <td class="p-4 text-center">✅</td>
+                            <td class="p-4 text-center">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold">Performance élevée</td>
+                            <td class="p-4 text-center">⚠️</td>
+                            <td class="p-4 text-center">✅</td>
+                            <td class="p-4 text-center">✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Architecture -->
+        <section class="container mx-auto px-4 py-12" id="architecture">
+            <h2 class="text-3xl font-bold text-center mb-10">Architecture d'une PWA</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">🌐 Application Web</h3>
+                    <p>Code HTML, CSS et JavaScript qui forme la base de l'application</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">📄 Manifeste Web</h3>
+                    <p>Fichier JSON définissant les métadonnées</p>
+                    <pre class="mt-4 text-sm"><code>{
+  "name": "Ma PWA",
+  "short_name": "PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}</code></pre>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">⚙️ Service Worker</h3>
+                    <p>Script JavaScript pour gérer le cache et l'accès hors ligne</p>
+                    <pre class="mt-4 text-sm"><code>self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open('pwa-cache').then(cache => {
+      return cache.addAll([
+        '/', '/index.html', 
+        '/styles.css', '/script.js'
+      ]);
+    })
+  );
+});</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Étapes de Création -->
+        <section class="container mx-auto px-4 py-12 bg-blue-50" id="creation-pwa">
+            <h2 class="text-3xl font-bold text-center mb-10">Étapes de Création d'une PWA</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <ol class="list-decimal pl-6 space-y-4">
+                    <li>Créer un projet Web (HTML, CSS, JS)</li>
+                    <li>Ajouter un fichier manifest.json</li>
+                    <li>Mettre en place un Service Worker</li>
+                    <li>Tester et déployer la PWA</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Cas d'Utilisation -->
+        <section class="mb-16 bg-blue-100 p-10 rounded-lg">
+            <h2 class="text-3xl font-bold text-center mb-10">Cas d'Utilisation Réels</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">💬 Twitter Lite</h3>
+                    <p>30% plus rapide qu'une app native, offrant une expérience utilisateur légère et performante</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🛒 AliExpress</h3>
+                    <p>+104% d'utilisateurs actifs après l'adoption de la PWA</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">🚗 Uber</h3>
+                    <p>Application ultra-légère de moins de 50 Ko, fonctionnant sur tous les réseaux</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outils et Pratiques -->
+        <section class="container mx-auto px-4 py-12" id="outils-pratiques">
+            <h2 class="text-3xl font-bold text-center mb-10">Outils et Bonnes Pratiques</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">🔧 Outils Recommandés</h3>
+                    <ul class="list-disc pl-5">
+                        <li>Lighthouse (Google Chrome) : Analyse et amélioration de la PWA</li>
+                        <li>Workbox : Facilite la gestion des Service Workers</li>
+                        <li>DevTools (F12) : Debug et monitoring des performances</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">💡 Bonnes Pratiques</h3>
+                    <ul class="list-disc pl-5">
+                        <li>Toujours utiliser HTTPS</li>
+                        <li>Optimiser les performances (lazy loading, compression d'images...)</li>
+                        <li>Tester sur plusieurs appareils et navigateurs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limites -->
+        <section class="container mx-auto px-4 py-12 bg-red-50" id="limitations">
+            <h2 class="text-3xl font-bold text-center mb-10">Limites et Défis des PWA</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">⚠️ Limitations Actuelles</h3>
+                <ul class="list-disc pl-5 space-y-3">
+                    <li>Accès limité aux fonctionnalités natives (Bluetooth, NFC...)</li>
+                    <li>Moins performantes pour les jeux et applications lourdes</li>
+                    <li>Support variable selon les navigateurs (iOS plus restrictif)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Ressources -->
+        <section class="container mx-auto px-4 py-12" id="ressources">
+            <h2 class="text-3xl font-bold text-center mb-10">Ressources pour Approfondir</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">📚 Sites et Tutoriels</h3>
+                    <ul class="list-disc pl-5">
+                        <li>MDN Web Docs - PWA</li>
+                        <li>Google Developers - PWA</li>
+                        <li>PWA Builder</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">🎥 Formations</h3>
+                    <ul class="list-disc pl-5">
+                        <li>Udemy : "Développez votre première PWA"</li>
+                        <li>YouTube : "Créer une PWA en 10 minutes"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="bg-blue-600 text-white py-16 text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-6">Prêt à Expérimenter les PWA ?</h2>
+                <p class="text-xl mb-8">Les PWA offrent une solution moderne et performante pour le web. Elles combinent les avantages des applications web et mobiles.</p>
+                <a href="#" class="bg-white text-blue-600 px-10 py-4 rounded-full hover:bg-blue-100 transition text-lg font-semibold">Commencer</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© Formation simplon/P6</p>
+        </div>
+    </footer>
+</body>
+</html>
